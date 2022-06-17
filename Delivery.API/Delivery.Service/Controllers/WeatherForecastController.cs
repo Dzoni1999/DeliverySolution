@@ -35,5 +35,14 @@ namespace Delivery.Service.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet]
+        [Route("GetUserById")]
+        public ActionResult GetUserById(int userId)
+        {
+            //User user = new User();
+
+            return Ok("test");
+        }
     }
 }

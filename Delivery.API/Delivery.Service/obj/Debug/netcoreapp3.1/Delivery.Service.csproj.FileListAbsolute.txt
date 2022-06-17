@@ -19,3 +19,6 @@ C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.
 C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\obj\Debug\netcoreapp3.1\Delivery.Service.dll
 C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\obj\Debug\netcoreapp3.1\Delivery.Service.pdb
 C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\obj\Debug\netcoreapp3.1\Delivery.Service.genruntimeconfig.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\bin\Debug\netcoreapp3.1\Delivery.Model.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\bin\Debug\netcoreapp3.1\Delivery.Model.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\obj\Debug\netcoreapp3.1\Delivery.Service.csproj.CopyComplete

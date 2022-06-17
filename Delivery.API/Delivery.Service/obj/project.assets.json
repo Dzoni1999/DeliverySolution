@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Delivery.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Delivery.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Delivery.Model.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Delivery.Model/1.0.0": {
+      "type": "project",
+      "path": "../Delivery.Model/Delivery.Model.csproj",
+      "msbuildProject": "../Delivery.Model/Delivery.Model.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Delivery.Model >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\eehee\\.nuget\\packages\\": {},
@@ -41,7 +60,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\eehee\\Desktop\\DeliverySolutions\\DeliverySolution\\Delivery.API\\Delivery.Model\\Delivery.Model.csproj": {
+              "projectPath": "C:\\Users\\eehee\\Desktop\\DeliverySolutions\\DeliverySolution\\Delivery.API\\Delivery.Model\\Delivery.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
