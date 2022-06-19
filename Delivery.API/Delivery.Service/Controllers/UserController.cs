@@ -1,4 +1,5 @@
-﻿using Delivery.Model.Classes;
+﻿using Delivery.Contracts;
+using Delivery.Entity.Model.Classes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,21 +13,26 @@ namespace Delivery.Service.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
+        private IRepositoryWrapper _repository;
+
+        public UserController(IRepositoryWrapper repositoryWrapper)
+        {
+            _repository = repositoryWrapper;
+        }
+
         [HttpGet]
         public IActionResult Get()
         {
-            User user = new User();
 
-            return Ok(user);
+            return Ok();
         }
 
         [HttpGet]
         [Route("GetUserById")]
-        public ActionResult GetUserById(int userId)
+        public User GetUserById(int userId)
         {
             User user = new User();
-
-            return Ok("test");
+            return user;
         }
     }
 }

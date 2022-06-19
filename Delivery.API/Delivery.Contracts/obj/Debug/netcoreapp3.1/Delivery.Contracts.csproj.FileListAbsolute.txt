@@ -1,0 +1,13 @@
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\bin\Debug\netcoreapp3.1\Delivery.Contracts.deps.json
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\bin\Debug\netcoreapp3.1\Delivery.Contracts.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\bin\Debug\netcoreapp3.1\Delivery.Contracts.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\obj\Debug\netcoreapp3.1\Delivery.Contracts.csproj.AssemblyReference.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\obj\Debug\netcoreapp3.1\Delivery.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\obj\Debug\netcoreapp3.1\Delivery.Contracts.AssemblyInfoInputs.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\obj\Debug\netcoreapp3.1\Delivery.Contracts.AssemblyInfo.cs
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\obj\Debug\netcoreapp3.1\Delivery.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\obj\Debug\netcoreapp3.1\Delivery.Contracts.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\obj\Debug\netcoreapp3.1\Delivery.Contracts.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\bin\Debug\netcoreapp3.1\Delivery.Entity.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\bin\Debug\netcoreapp3.1\Delivery.Entity.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Contracts\obj\Debug\netcoreapp3.1\Delivery.Contracts.csproj.CopyComplete

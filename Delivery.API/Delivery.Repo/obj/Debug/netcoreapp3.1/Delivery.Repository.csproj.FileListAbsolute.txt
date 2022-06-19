@@ -1,0 +1,15 @@
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\bin\Debug\netcoreapp3.1\Delivery.Repository.deps.json
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\bin\Debug\netcoreapp3.1\Delivery.Repository.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\bin\Debug\netcoreapp3.1\Delivery.Repository.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repository.csproj.AssemblyReference.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repository.AssemblyInfoInputs.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repository.AssemblyInfo.cs
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repository.csproj.CoreCompileInputs.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repository.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repository.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\bin\Debug\netcoreapp3.1\Delivery.Contracts.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\bin\Debug\netcoreapp3.1\Delivery.Entity.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\bin\Debug\netcoreapp3.1\Delivery.Contracts.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\bin\Debug\netcoreapp3.1\Delivery.Entity.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repository.csproj.CopyComplete

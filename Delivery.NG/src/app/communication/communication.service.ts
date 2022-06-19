@@ -21,8 +21,7 @@ export class CommunicationService {
   GetUserById(userId: number){
     console.log(this.apiPath + 'api/User/GetUserById');
     let param = new HttpParams().set("userId", userId.toString());
-    return this.http.get<string>(this.apiPath + 'WeatherForecast/GetUserById?userId=5');
-    // return this.http.get<string>(this.apiPath + 'User/GetUserById', {headers: this.headers, params: param});
+    return this.http.get<string>(this.apiPath + 'User/GetUserById?userId=5');
   }
 
 }

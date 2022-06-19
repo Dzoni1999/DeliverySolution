@@ -5,7 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Delivery.Model\Delivery.Model.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Delivery.Contracts\Delivery.Contracts.csproj" />
+    <ProjectReference Include="..\Delivery.Repo\Delivery.Repository.csproj" />
+    <ProjectReference Include="..\Entity\Delivery.Entity.csproj" />
   </ItemGroup>
 
 

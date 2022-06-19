@@ -1,0 +1,16 @@
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\bin\Debug\netcoreapp3.1\Delivery.DAL.deps.json
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\bin\Debug\netcoreapp3.1\Delivery.DAL.runtimeconfig.json
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\bin\Debug\netcoreapp3.1\Delivery.DAL.runtimeconfig.dev.json
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\bin\Debug\netcoreapp3.1\Delivery.DAL.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\bin\Debug\netcoreapp3.1\Delivery.DAL.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\bin\Debug\netcoreapp3.1\Delivery.Model.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\bin\Debug\netcoreapp3.1\Delivery.Model.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\obj\Debug\netcoreapp3.1\Delivery.DAL.csproj.AssemblyReference.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\obj\Debug\netcoreapp3.1\Delivery.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\obj\Debug\netcoreapp3.1\Delivery.DAL.AssemblyInfoInputs.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\obj\Debug\netcoreapp3.1\Delivery.DAL.AssemblyInfo.cs
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\obj\Debug\netcoreapp3.1\Delivery.DAL.csproj.CoreCompileInputs.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\obj\Debug\netcoreapp3.1\Delivery.DAL.csproj.CopyComplete
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\obj\Debug\netcoreapp3.1\Delivery.DAL.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\obj\Debug\netcoreapp3.1\Delivery.DAL.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.DAL\obj\Debug\netcoreapp3.1\Delivery.DAL.genruntimeconfig.cache

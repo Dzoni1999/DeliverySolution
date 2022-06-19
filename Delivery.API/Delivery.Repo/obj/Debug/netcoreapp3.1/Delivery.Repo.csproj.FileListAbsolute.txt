@@ -1,0 +1,10 @@
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\bin\Debug\netcoreapp3.1\Delivery.Repo.deps.json
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\bin\Debug\netcoreapp3.1\Delivery.Repo.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\bin\Debug\netcoreapp3.1\Delivery.Repo.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repo.csproj.AssemblyReference.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repo.AssemblyInfoInputs.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repo.AssemblyInfo.cs
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repo.csproj.CoreCompileInputs.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repo.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Repo\obj\Debug\netcoreapp3.1\Delivery.Repo.pdb

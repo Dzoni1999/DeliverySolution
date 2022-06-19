@@ -40,7 +40,7 @@ namespace Delivery.Service.Controllers
         [Route("GetUserById")]
         public ActionResult GetUserById(int userId)
         {
-            //User user = new User();
+
 
             return Ok("test");
         }

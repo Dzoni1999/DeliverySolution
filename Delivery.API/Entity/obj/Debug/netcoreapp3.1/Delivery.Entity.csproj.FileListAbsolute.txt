@@ -1,0 +1,13 @@
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\obj\Debug\netcoreapp3.1\Delivery.Entity.csproj.AssemblyReference.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\obj\Debug\netcoreapp3.1\Delivery.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\obj\Debug\netcoreapp3.1\Delivery.Entity.AssemblyInfoInputs.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\obj\Debug\netcoreapp3.1\Delivery.Entity.AssemblyInfo.cs
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\obj\Debug\netcoreapp3.1\Delivery.Entity.csproj.CoreCompileInputs.cache
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\bin\Debug\netcoreapp3.1\Delivery.Entity.deps.json
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\bin\Debug\netcoreapp3.1\Delivery.Entity.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\bin\Debug\netcoreapp3.1\Delivery.Entity.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\obj\Debug\netcoreapp3.1\Delivery.Entity.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\obj\Debug\netcoreapp3.1\Delivery.Entity.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\bin\Debug\netcoreapp3.1\Delivery.Entity.runtimeconfig.json
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\bin\Debug\netcoreapp3.1\Delivery.Entity.runtimeconfig.dev.json
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Entity\obj\Debug\netcoreapp3.1\Delivery.Entity.genruntimeconfig.cache
