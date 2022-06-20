@@ -74,3 +74,6 @@ C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.
 C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\bin\Debug\netcoreapp3.1\Delivery.Repository.dll
 C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\bin\Debug\netcoreapp3.1\Delivery.Contracts.pdb
 C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\bin\Debug\netcoreapp3.1\Delivery.Repository.pdb
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\eehee\Desktop\DeliverySolutions\DeliverySolution\Delivery.API\Delivery.Service\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll

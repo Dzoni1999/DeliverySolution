@@ -19,7 +19,7 @@ namespace Delivery.Service.Controllers
         {
             _repository = repositoryWrapper;
         }
-
+        
         [HttpGet]
         public IActionResult Get()
         {

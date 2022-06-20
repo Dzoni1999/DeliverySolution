@@ -4,6 +4,7 @@ using Delivery.Entity.Model.Classes;
 using Delivery.Repo;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Delivery.Repository
@@ -13,5 +14,6 @@ namespace Delivery.Repository
         public UserRepository(DeliveryContext deliveryContext) : base(deliveryContext)
         {
         }
+
     }
 }

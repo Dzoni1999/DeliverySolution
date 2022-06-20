@@ -7,5 +7,6 @@ namespace Delivery.Contracts
 {
     public interface IUserRepository : IRepositoryBase<User>
     {
+
     }
 }
