@@ -15,7 +15,8 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
   exports: [
     LoginComponent,
     RegisterComponent, 
-    ResetPasswordComponent
+    ResetPasswordComponent,
+
   ]
 })
 export class AuthModule { }
