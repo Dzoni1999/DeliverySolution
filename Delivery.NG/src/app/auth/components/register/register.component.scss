@@ -1,0 +1,88 @@
+form{
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    color: #fff;
+    box-shadow: 0 0 13px 2px #00000036;
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+    align-content: center;
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 30px;
+        color: white;
+        font-weight: bold;
+    }
+
+}
+
+a{
+    padding-left: 25%;
+    padding-top: 5%;
+}
+
+.container{
+    min-height: 100%;
+    width: 100%;
+    
+    max-width: 100%;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        z-index: -1;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+
+        background-image: url(https://steamuserimages-a.akamaihd.net/ugc/933813679840155863/91B2F376343472AC26FEE2BE14173A041B77901B/?imw=1024&imh=692&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true&fbclid=IwAR2NYlQRrJuSTbGR_0BP6wpdpsL7-wDY_cw5xR3qyYJOFlsLcxaDZL6ZfqU);
+        background-size: cover;
+        display: block;
+        z-index: 0;
+    }
+}
+
+#birthDate{
+    display: inline;
+    max-width: 45%;
+    margin-right: 27px;
+}
+
+#role{
+    display: inline;
+    max-width: 45%;
+}
+
+#dateOfBirth{
+    margin-right: 67px;
+}
+
+select {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+  }

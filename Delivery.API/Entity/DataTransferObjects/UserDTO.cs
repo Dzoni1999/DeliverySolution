@@ -1,8 +1,4 @@
-﻿using Delivery.Entity.Model.Classes;
-using Delivery.Entity.Model.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace Delivery.Entity.DataTransferObjects
 {
@@ -14,7 +10,7 @@ namespace Delivery.Entity.DataTransferObjects
         public string Email { get; set; }
         public string Password { get; set; }
         public DateTime BirthDate { get; set; }
-        public virtual Address Address { get; set; }
-        public Role Role { get; set; }
+        public string Address { get; set; }
+        public string Role { get; set; }
     }
 }

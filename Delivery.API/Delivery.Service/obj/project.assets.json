@@ -1650,6 +1650,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
@@ -1673,6 +1674,19 @@
         },
         "runtime": {
           "bin/placeholder/Delivery.Repository.dll": {}
+        }
+      },
+      "Delivery.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Delivery.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Delivery.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Delivery.Services.dll": {}
         }
       }
     }
@@ -6102,6 +6116,11 @@
       "type": "project",
       "path": "../Delivery.Repo/Delivery.Repository.csproj",
       "msbuildProject": "../Delivery.Repo/Delivery.Repository.csproj"
+    },
+    "Delivery.Services/1.0.0": {
+      "type": "project",
+      "path": "../Delivery.Services/Delivery.Services.csproj",
+      "msbuildProject": "../Delivery.Services/Delivery.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6110,6 +6129,7 @@
       "Delivery.Contracts >= 1.0.0",
       "Delivery.Entity >= 1.0.0",
       "Delivery.Repository >= 1.0.0",
+      "Delivery.Services >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.8",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.5"
     ]
@@ -6154,6 +6174,9 @@
             },
             "C:\\Users\\eehee\\Desktop\\DeliverySolutions\\DeliverySolution\\Delivery.API\\Delivery.Repo\\Delivery.Repository.csproj": {
               "projectPath": "C:\\Users\\eehee\\Desktop\\DeliverySolutions\\DeliverySolution\\Delivery.API\\Delivery.Repo\\Delivery.Repository.csproj"
+            },
+            "C:\\Users\\eehee\\Desktop\\DeliverySolutions\\DeliverySolution\\Delivery.API\\Delivery.Services\\Delivery.Services.csproj": {
+              "projectPath": "C:\\Users\\eehee\\Desktop\\DeliverySolutions\\DeliverySolution\\Delivery.API\\Delivery.Services\\Delivery.Services.csproj"
             },
             "C:\\Users\\eehee\\Desktop\\DeliverySolutions\\DeliverySolution\\Delivery.API\\Entity\\Delivery.Entity.csproj": {
               "projectPath": "C:\\Users\\eehee\\Desktop\\DeliverySolutions\\DeliverySolution\\Delivery.API\\Entity\\Delivery.Entity.csproj"

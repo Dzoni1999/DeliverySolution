@@ -32,6 +32,8 @@ namespace Delivery.Entity.Model.Classes
         [Required]
         public virtual Address Address { get; set; }
 
+        public string Permissions { get; set; }
+
         [Required]
         public Role Role { get; set; }
     }

@@ -10,7 +10,7 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent {
   title = 'DeliverySolution';
-  apiPath = environment.apiUrl;
+  apiPath = environment.apiHttpUrl;
 
   constructor(private comSer : CommunicationService){
   }

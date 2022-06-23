@@ -1,6 +1,8 @@
 using Delivery.Contracts;
 using Delivery.Entity;
 using Delivery.Repository;
+using Delivery.Service.Services;
+using Delivery.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -43,7 +45,13 @@ namespace Delivery.Service
                        .AllowAnyHeader();
             }));
             services.AddControllers();
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+        }
+
+        private void BindServices(IServiceCollection services)
+        {
+            services.AddTransient<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

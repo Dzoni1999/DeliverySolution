@@ -13,6 +13,14 @@ form{
     box-shadow: 0 0 13px 2px #00000036;
 }
 
+.router-link-active{
+
+}
+
+#password{
+    color: black;
+}
+
 .welcome{
     display: flex;
     justify-content: center;
@@ -23,6 +31,8 @@ form{
         font-size: 24px;
         text-align: center;
         margin-bottom: 30px;
+        color: white;
+        font-weight: bold;
     }
 
 }
@@ -32,16 +42,7 @@ form{
     width: 100%;
     
     max-width: 100%;
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #000;
-        z-index: -1;
-    }
+    
     &::before {
         content: "";
         position: absolute;
@@ -55,6 +56,5 @@ form{
         background-size: cover;
         display: block;
         z-index: 0;
-        opacity: .9;
     }
 }

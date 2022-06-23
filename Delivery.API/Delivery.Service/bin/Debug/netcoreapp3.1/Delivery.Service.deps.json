@@ -35,6 +35,7 @@
           "Delivery.Contracts": "1.0.0",
           "Delivery.Entity": "1.0.0",
           "Delivery.Repository": "1.0.0",
+          "Delivery.Services": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.8",
           "Microsoft.EntityFrameworkCore.Design": "5.0.5",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1532,6 +1533,7 @@
       },
       "Delivery.Entity/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
@@ -1553,6 +1555,17 @@
         },
         "compile": {
           "Delivery.Repository.dll": {}
+        }
+      },
+      "Delivery.Services/1.0.0": {
+        "dependencies": {
+          "Delivery.Entity": "1.0.0"
+        },
+        "runtime": {
+          "Delivery.Services.dll": {}
+        },
+        "compile": {
+          "Delivery.Services.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -3899,6 +3912,11 @@
       "sha512": ""
     },
     "Delivery.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Delivery.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

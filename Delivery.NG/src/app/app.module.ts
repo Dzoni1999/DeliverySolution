@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './common-components/navbar/navbar.component';
 import { SidebarComponent } from './common-components/sidebar/sidebar.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { HomeComponent } from './home/home/home.component';
+import { HiddenViewComponent } from './home/hidden-view/hidden-view.component';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     AppComponent,
     NavbarComponent,
     SidebarComponent,
+    HomeComponent,
+    HiddenViewComponent,
   ],
   imports: [
     BrowserModule,
