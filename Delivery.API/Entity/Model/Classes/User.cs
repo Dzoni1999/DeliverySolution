@@ -30,7 +30,7 @@ namespace Delivery.Entity.Model.Classes
         public DateTime BirthDate { get; set; }
 
         [Required]
-        public virtual Address Address { get; set; }
+        public string Address { get; set; }
 
         public string Permissions { get; set; }
 

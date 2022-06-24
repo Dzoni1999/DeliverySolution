@@ -21,9 +21,10 @@ namespace Delivery.Service.Controllers
         private IRepositoryWrapper _repository;
         private IUserService _userService; 
 
-        public UserController(IRepositoryWrapper repositoryWrapper)
+        public UserController(IRepositoryWrapper repositoryWrapper, IUserService userService)
         {
             _repository = repositoryWrapper;
+            _userService = userService;
         }
 
         // ----Register Section----
@@ -32,7 +33,7 @@ namespace Delivery.Service.Controllers
         [Route("RegisterUser")]
         public ActionResult Register(UserDTO userInfo)
         {
-            var retval = _userService.Register(userInfo);
+            var retval = this._userService.Register(userInfo);
 
             return Ok(retval);
         }

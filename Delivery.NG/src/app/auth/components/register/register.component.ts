@@ -31,8 +31,8 @@ export class RegisterComponent implements OnInit {
     this.userInfo = this.MapData(registerSection);
     this.communicationService.RegisterUser(this.userInfo).subscribe(
       data=> {
-        console.log("working!");
         console.log(data);
+        
       },
       err => {
         console.log(JSON.stringify(err));

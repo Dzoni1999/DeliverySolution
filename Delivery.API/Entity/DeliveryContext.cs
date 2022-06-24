@@ -9,20 +9,13 @@ namespace Delivery.Entity
         public DeliveryContext(DbContextOptions<DeliveryContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Item> Items { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<User>()
-               .HasOne(a => a.Address)
-               .WithOne(b => b.User)
-               .HasForeignKey<User>(b => b.ID);
-
-            modelBuilder.Entity<Order>()
-                .HasOne(a => a.Address)
-                .WithOne(b => b.Order)
-                .HasForeignKey<Order>(b => b.ID);
         } 
     }
 }

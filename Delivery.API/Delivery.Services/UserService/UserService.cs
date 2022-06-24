@@ -20,6 +20,7 @@ namespace Delivery.Services.UserService
             _mapper = mapper;
         }
 
+        // ----Register Section----
         public ResponseDTO<User> Register(UserDTO dataIn)
         {
             var user = _mapper.Map<User>(dataIn);
@@ -42,17 +43,19 @@ namespace Delivery.Services.UserService
         private User MapUser(UserDTO user)
         {
             User mappedUser = new User();
-            user.Name = user.Name;
-            user.LastName = user.LastName;
-            user.UserName = user.UserName;
-            user.Email = user.Email;
-            user.Password = user.Password;
-            user.Role = user.Role;
-            user.BirthDate = user.BirthDate;
-            user.Address = user.Address;
+            mappedUser.Name = user.Name;
+            mappedUser.LastName = user.LastName;
+            mappedUser.UserName = user.UserName;
+            mappedUser.Email = user.Email;
+            mappedUser.Password = user.Password;
+            mappedUser.Role = user.Role;
+            mappedUser.BirthDate = user.BirthDate;
+            mappedUser.Address = user.Address;
 
             return mappedUser;
         }
+
+        // ----Login Section----
 
     }
 }

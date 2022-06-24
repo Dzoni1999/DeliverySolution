@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Delivery.Entity.Model.Enums;
+using System;
 
 namespace Delivery.Entity.DataTransferObjects
 {
@@ -11,6 +12,6 @@ namespace Delivery.Entity.DataTransferObjects
         public string Password { get; set; }
         public DateTime BirthDate { get; set; }
         public string Address { get; set; }
-        public string Role { get; set; }
+        public Role Role { get; set; }
     }
 }
