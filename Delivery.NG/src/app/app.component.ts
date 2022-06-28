@@ -1,7 +1,5 @@
-import { CommunicationService } from './communication/communication.service';
+import { ToastrService } from 'ngx-toastr';
 import { Component } from '@angular/core';
-import { env } from 'process';
-import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +7,9 @@ import { environment } from '../environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'DeliverySolution';
-  apiPath = environment.apiHttpUrl;
 
-  constructor(private comSer : CommunicationService){
+  constructor(){}
+  
+  ngOnInit(){
   }
-
 }

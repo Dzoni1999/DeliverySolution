@@ -1,36 +1,36 @@
+import { CommonCompsModule } from './common-comps/common-comps.module';
+import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/auth.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthModule } from './auth/auth.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NavbarComponent } from './common-components/navbar/navbar.component';
-import { SidebarComponent } from './common-components/sidebar/sidebar.component';
-import { HomeComponent } from './home/home/home.component';
-import { HiddenViewComponent } from './home/hidden-view/hidden-view.component';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RolePipe } from './pipes/role.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    SidebarComponent,
-    HomeComponent,
-    HiddenViewComponent,
+    RolePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AuthModule,
-    FormsModule,
-    ReactiveFormsModule,
+    UserModule,
+    CommonCompsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
+
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+  ],
+  exports: [
+  ]
 })
 export class AppModule { }
