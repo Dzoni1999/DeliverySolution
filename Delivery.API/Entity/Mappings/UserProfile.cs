@@ -11,7 +11,7 @@ namespace Delivery.Entity.Mappings
     {
         public UserProfile()
         {
-            CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap().ForMember(x => x.Role, opt => opt.Ignore());
         }
     }
 }

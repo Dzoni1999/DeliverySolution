@@ -15,15 +15,4 @@ export class AppComponent {
   constructor(private comSer : CommunicationService){
   }
 
-  testApi(){
-    this.comSer.GetUserById(12).subscribe(
-      data => {
-        console.log("api working");
-      },
-      err => {
-        console.log(JSON.stringify(err));
-        alert("Error while getting users");
-      }
-    )
-  }
 }

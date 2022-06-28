@@ -8,10 +8,11 @@ import { AuthModule } from './auth/auth.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './common-components/navbar/navbar.component';
 import { SidebarComponent } from './common-components/sidebar/sidebar.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HomeComponent } from './home/home/home.component';
 import { HiddenViewComponent } from './home/hidden-view/hidden-view.component';
 
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,11 @@ import { HiddenViewComponent } from './home/hidden-view/hidden-view.component';
     AuthModule,
     FormsModule,
     ReactiveFormsModule,
-    MatCheckboxModule
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

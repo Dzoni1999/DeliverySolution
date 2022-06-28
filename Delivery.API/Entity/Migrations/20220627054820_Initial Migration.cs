@@ -25,25 +25,18 @@ namespace Delivery.Entity.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "Role",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Permissions = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Role = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.ID);
+                    table.PrimaryKey("PK_Role", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -68,10 +61,43 @@ namespace Delivery.Entity.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Permissions = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RoleId = table.Column<int>(type: "int", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Users_Role_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "Role",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Items_OrderId",
                 table: "Items",
                 column: "OrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_RoleId",
+                table: "Users",
+                column: "RoleId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -84,6 +110,9 @@ namespace Delivery.Entity.Migrations
 
             migrationBuilder.DropTable(
                 name: "Orders");
+
+            migrationBuilder.DropTable(
+                name: "Role");
         }
     }
 }

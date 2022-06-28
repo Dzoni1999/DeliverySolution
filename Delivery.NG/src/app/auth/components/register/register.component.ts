@@ -1,7 +1,10 @@
-import { FormGroup, FormControl } from '@angular/forms';
+import { NotificationService } from './../../../services/notification.service';
+import { ToastrService } from 'ngx-toastr';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from './../../../models/user';
 import { Component, OnInit } from '@angular/core';
 import { CommunicationService } from 'src/app/communication/communication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -10,28 +13,59 @@ import { CommunicationService } from 'src/app/communication/communication.servic
 })
 export class RegisterComponent implements OnInit {
 
-  userInfo: User = new User;
-  
-  constructor(private communicationService : CommunicationService) { }
+  registerForm:  FormGroup;
 
-    registerSection = new FormGroup({
-      registerEmail : new FormControl(''),
-      registerPassword : new FormControl(''),
-      registerUsername : new FormControl(''),
-      registerName : new FormControl(''),
-      registerLastName : new FormControl(''),
-      registerAddress : new FormControl(''),
-      registerRole : new FormControl(''),
-      registerDate : new FormControl(''),
+  constructor(private communicationService : CommunicationService, private notification: NotificationService, private notifyService: NotificationService, private router: Router) { 
+    
+  }
+
+  ngOnInit() {
+    this.registerForm = new FormGroup({
+      name : new FormControl('',[
+        Validators.required, 
+        // Validators.minLength(4)
+      ]),
+      lastName: new FormControl('',[
+        Validators.required, 
+        // Validators.minLength(4)
+      ]),
+      username : new FormControl('',[
+        Validators.required, 
+        // Validators.minLength(6)
+      ]),
+      password: new FormControl('',[
+        Validators.required, 
+        // Validators.minLength(8)
+      ]),
+      email : new FormControl('',[
+        Validators.required, 
+        // Validators.email
+      ]),
+      date: new FormControl('',[
+        Validators.required, 
+      ]),
+      role: new FormControl('1',[
+        Validators.required, 
+      ]),
+      address: new FormControl('',[
+        Validators.required, 
+      ]),
     });
+  }
 
-  ngOnInit() {}
-
-  RegisterUser(registerSection: FormGroup):any{
-    this.userInfo = this.MapData(registerSection);
-    this.communicationService.RegisterUser(this.userInfo).subscribe(
+  registerUser(){
+    console.log(this.registerForm.value)
+    this.communicationService.RegisterUser(this.registerForm.value).subscribe(
       data=> {
         console.log(data);
+        if (data.status == false){
+          this.notification.showError("Error!","Email already exists");
+          this.router.navigate(['register']);
+        }
+        else{
+          this.notification.showSuccess("Success!","Your subscription request has been submitted successfully and is currently being processed. You will receive a notification email shortly once your subscription has been fully activated");
+          this.router.navigate(['login']);
+        }
         
       },
       err => {
@@ -41,15 +75,4 @@ export class RegisterComponent implements OnInit {
     );
   }
 
-  MapData(registerSection: FormGroup) : User{
-    this.userInfo.Email = registerSection.controls.registerEmail.value;
-    this.userInfo.Password = registerSection.controls.registerPassword.value;
-    this.userInfo.UserName = registerSection.controls.registerUsername.value;
-    this.userInfo.Name = registerSection.controls.registerName.value;
-    this.userInfo.LastName = registerSection.controls.registerLastName.value;
-    this.userInfo.Address = registerSection.controls.registerAddress.value;
-    this.userInfo.Role = registerSection.controls.registerRole.value;
-
-    return this.userInfo;
-  }
 }

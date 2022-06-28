@@ -1,8 +1,8 @@
 form{
     max-width: 400px;
     margin: 0 auto;
-    margin-top: 80px;
-    padding: 65px;
+    margin-top: 40px;
+    padding: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,8 +29,12 @@ form{
 
 }
 
+.inputError{
+
+}
+
 a{
-    padding-left: 25%;
+    text-align: center;
     padding-top: 5%;
 }
 
@@ -65,6 +69,11 @@ a{
     }
 }
 
+label{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
 #birthDate{
     display: inline;
     max-width: 45%;
@@ -77,7 +86,7 @@ a{
 }
 
 #dateOfBirth{
-    margin-right: 67px;
+    margin-right: 87px;
 }
 
 select {
@@ -86,3 +95,22 @@ select {
     background-position-x: 100%;
     background-position-y: 5px;
   }
+
+.error{
+    color:red;
+}
+
+.mb-4{
+    margin-bottom: 02px !important;
+}
+
+input.ng.invalid{
+    border: red;
+}
+input.ng.valid{
+    border: green;
+}
+
+#backToLogin{
+    text-align: center;
+}

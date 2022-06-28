@@ -35,6 +35,7 @@ namespace Delivery.Entity.Model.Classes
         public string Permissions { get; set; }
 
         [Required]
+        public int? RoleId { get; set; }
         public Role Role { get; set; }
     }
 }

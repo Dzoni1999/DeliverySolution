@@ -20,17 +20,13 @@ export class CommunicationService {
    }
 
   //  Login User Section
-   CheckIfUserExists(loginInfo: Login){
+   CheckIfUserExists(loginInfo: any){
     return this.http.post<any>(this.apiPath + "User/CheckIfUserExists", loginInfo);
    }
 
   // Register User Section
-  RegisterUser(userInfo: User){
+  RegisterUser(userInfo: any){
     return this.http.post<any>(this.apiPath + "User/RegisterUser", userInfo);
   }
 
-  GetUserById(userId: number){
-    let param = new HttpParams().set("userId", userId.toString());
-    return this.http.get<string>(this.apiPath + 'User/GetUserById?userId=5');
-  }
 }

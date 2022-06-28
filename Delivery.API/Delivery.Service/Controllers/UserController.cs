@@ -43,19 +43,14 @@ namespace Delivery.Service.Controllers
 
         [HttpPost]
         [Route("CheckIfUserExists")]
-        public ActionResult CheckIfUserExistsa(LoginDTO loginInfo)
+        public ActionResult CheckIfUserExists(LoginDTO loginInfo)
         {
-            ResponseDTO<string> retval;
+            ResponseDTO<string> retval = null;
 
-            User user = new User() { ID=5, Email="111", Name = "111", LastName = "111", UserName = "111", Role = Entity.Model.Enums.Role.Admin, Permissions=""};
+            var user = this._userService.GetUserByEmailAndPass(loginInfo.Email, loginInfo.Password);
 
-            if (user == null)
-                retval = new ResponseDTO<string>(false, "Wrong email or password.");
-            else
-            {
-                string token = JwtManager.GetToken(user.Email, user.Role.ToString(), user.ID, user.Permissions, user.UserName);
-                retval = new ResponseDTO<string>(token);
-            }
+            string token = JwtManager.GetToken(user.Email, user.Role?.Name, user.ID, user.Role?.Permissions, user.Name);
+            retval = new ResponseDTO<string>(token);
 
             return Ok(retval);
         }

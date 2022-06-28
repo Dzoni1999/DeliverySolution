@@ -1,53 +1,110 @@
 <div class="container">
-  <form [formGroup]="registerSection" (ngSubmit)="RegisterUser(registerSection)">
+  <form (submit)="registerUser()" [formGroup]="registerForm">
+
         <div class="register">
-          <h1>Please Register Yourself</h1>
+          <h1>Register</h1>
         </div>
 
-        <div class="form-outline mb-4">
-          <input type="text" id="firstName" class="form-control" formControlName="registerName" />
-          <label class="form-label" for="firstName">First Name</label>
-        </div>
+        <!-- ----First Name---- -->
         
         <div class="form-outline mb-4">
-          <input type="text" id="lastName" class="form-control" formControlName="registerLastName"/>
-          <label class="form-label" for="lastName">Last Name</label>
+          <small *ngIf="registerForm.get('name').invalid && registerForm.get('name').touched" class="text-danger">Name must be at least 4 characters</small>
+          <input type="text" 
+                 class="form-control"
+                 placeholder="Enter your name.."
+                 formControlName="name"
+                 />
+          <label class="form-label" for="Name">First Name</label>
         </div>
 
+        <!-- ----Last Name---- -->
+        
         <div class="form-outline mb-4">
-          <input type="text" id="username" class="form-control" formControlName="registerUsername"/>
-          <label class="form-label" for="username">Username</label>
+          <small *ngIf="registerForm.get('lastName').invalid && registerForm.get('lastName').touched" class="text-danger">Last name must be at least 4 characters</small>
+          <input type="text" required
+                 class="form-control"
+                 placeholder="Enter your last name.."
+                 formControlName="lastName"
+                 />
+          <label class="form-label" for="LastName">Last Name</label>
         </div>
 
+        <!-- ----Username---- -->
+        
         <div class="form-outline mb-4">
-          <input type="email" id="emailAddress" class="form-control" formControlName="registerEmail"/>
-          <label class="form-label" for="emailAddress">Email address</label>
+          <small *ngIf="registerForm.get('username').invalid && registerForm.get('username').touched" class="text-danger">Username must be at least 6 characters</small>
+          <input type="text" required
+                 class="form-control"
+                 placeholder="Enter your username.."
+                 formControlName="username"
+                 />
+          <label class="form-label" for="Username">Username</label>
         </div>
 
+        <!-- ----Email address---- -->
+
         <div class="form-outline mb-4">
-          <input type="password" id="password" class="form-control" formControlName="registerPassword"/>
+          <small *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched" class="text-danger">Incorrect email format</small>
+          <input type="text" required
+                 class="form-control"
+                 placeholder="Enter your email.."
+                 formControlName="email"
+                 />
+          <label class="form-label" for="Email">Email address</label>
+        </div>
+
+        <!-- ----Password---- -->
+
+        <div class="form-outline mb-4">
+          <small *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched" class="text-danger">Password must be at least 8 characters</small>
+          <input type="password" required
+                 class="form-control"
+                 placeholder="Enter your password.."
+                 formControlName="password"
+                 />
           <label class="form-label" for="password">Password</label>
         </div>
 
-        <div class="form-outline mb-4">
-          <input type="date" id="birthDate" class="form-control" formControlName="registerDate"/>
+        <!-- ----Date---- -->
 
-          <select name="role" id="role" class="form-control" formControlName="registerRole">
-            <option value="1">Admin</option>
-            <option value="2">User</option>
-            <option value="3">Deliverer</option>
+        <small *ngIf="registerForm.get('date').invalid && registerForm.get('date').touched" class="text-danger">Date is required</small>
+        <div class="form-outline mb-4">
+          <input type="date" required
+                 id="birthDate"
+                 class="form-control"
+                 placeholder="Enter your birth date.."
+                 formControlName="date"
+                 />
+
+        <!-- ----Role---- -->
+
+          <small *ngIf="registerForm.get('role').invalid && registerForm.get('role').touched" class="text-danger"></small>
+          <select name="role" 
+                  id="role" 
+                  class="form-control"
+                  formControlName="role"
+                 >
+            <option value="1">User</option>
+            <option value="2">Deliverer</option>
           </select>
 
-          <label id="dateOfBirth" class="form-label" for="birthDate">Date of Birth</label>
-          <label class="form-label" for="role">Role</label>
+          <label id="dateOfBirth" class="form-label" for="Date">Date of Birth</label>
+          <label class="form-label" for="Role">Role</label>
         </div>
 
-        <div class="form-outline mb-4">
-          <input type="text" id="address" class="form-control" formControlName="registerAddress"/>
-          <label class="form-label" for="address">Address</label>
+        <!-- ----Address---- -->
+
+          <div class="form-outline mb-4">
+          <small *ngIf="registerForm.get('address').invalid && registerForm.get('address').touched" class="text-danger">Address is required</small>
+          <input type="text" 
+                 class="form-control"
+                 placeholder="Enter your address.."
+                 formControlName="address"
+                 />
+          <label class="form-label" for="Address">Address</label>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block mb-4">Register</button> 
+        <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary btn-block mb-4">Register</button> 
 
         <a routerLink="/login">Back To Login Page</a>
 

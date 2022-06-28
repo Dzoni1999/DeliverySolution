@@ -4,14 +4,16 @@ using Delivery.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Delivery.Entity.Migrations
 {
     [DbContext(typeof(DeliveryContext))]
-    partial class DeliveryContextModelSnapshot : ModelSnapshot
+    [Migration("20220627054820_Initial Migration")]
+    partial class InitialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -90,7 +92,7 @@ namespace Delivery.Entity.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Role");
                 });
 
             modelBuilder.Entity("Delivery.Entity.Model.Classes.User", b =>

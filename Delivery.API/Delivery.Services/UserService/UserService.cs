@@ -2,7 +2,9 @@
 using Delivery.Entity;
 using Delivery.Entity.DataTransferObjects;
 using Delivery.Entity.Model.Classes;
+using Delivery.Entity.Model.Enums;
 using Delivery.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +30,20 @@ namespace Delivery.Services.UserService
 
             if (existing == null)
             {
-                user = MapUser(dataIn);
+                switch (Convert.ToInt32(dataIn.Role))
+                {
+                    case 1:
+                        user.RoleId = 1;
+                        break;
+                    case 2:
+                        user.RoleId = 2;
+                        break;
+                    case 3:
+                        user.RoleId = 3;
+                        break;
+                    default:
+                        return new ResponseDTO<User>(false, "Error while selecting Role. Try again!");
+                }
                 _context.Users.Add(user);
                 _context.SaveChanges();
 
@@ -40,22 +55,20 @@ namespace Delivery.Services.UserService
             }
         }
 
-        private User MapUser(UserDTO user)
-        {
-            User mappedUser = new User();
-            mappedUser.Name = user.Name;
-            mappedUser.LastName = user.LastName;
-            mappedUser.UserName = user.UserName;
-            mappedUser.Email = user.Email;
-            mappedUser.Password = user.Password;
-            mappedUser.Role = user.Role;
-            mappedUser.BirthDate = user.BirthDate;
-            mappedUser.Address = user.Address;
 
-            return mappedUser;
-        }
 
         // ----Login Section----
+        public User GetUserByEmailAndPass(string email, string pass)
+        {
+            var retval = this._context.Users
+                .Include(x => x.Role)
+                .FirstOrDefault(x => !x.IsDeleted && x.Email == email && x.Password == pass);
+
+            if (retval?.Password != pass)
+                return null;
+
+            return retval;
+        }
 
     }
 }

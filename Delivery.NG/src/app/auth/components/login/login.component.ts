@@ -1,7 +1,9 @@
 import { CommunicationService } from './../../../communication/communication.service';
 import { User, Login } from './../../../models/user';
 import { Component, OnInit } from '@angular/core';
+import { NotificationService } from './../../../services/notification.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,49 +11,33 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  loginInfo: Login = new Login;
-  currentUser : User = new User;
   
-  constructor(private communicationService : CommunicationService) { }
+  loginSection: FormGroup;
 
-  loginSection = new FormGroup({
-    loginEmail : new FormControl(''),
-    loginPassword : new FormControl('')
-  });
+  constructor(private communicationService : CommunicationService, private notification: NotificationService, private router: Router) { }
 
   ngOnInit() {
+    this.loginSection = new FormGroup({
+      email : new FormControl(''),
+      password : new FormControl('')
+    });
   }
 
-  testApi(){
-    this.communicationService.GetUserById(12).subscribe(
-      data => {
-        console.log("api working");
-      },
-      err => {
-        console.log(JSON.stringify(err));
-        alert("Error while getting users");
-      }
-    )
-  }
-
-  checkIfUserExists(loginSection: FormGroup):any{
-      this.loginInfo = this.MapData(loginSection);
-      this.communicationService.CheckIfUserExists(this.loginInfo).subscribe(
+  checkIfUserExists(){
+      this.communicationService.CheckIfUserExists(this.loginSection.value).subscribe(
         data => {
-          console.log("Working!");
-          console.log(data);
+          if (data.status == false){
+            this.notification.showError("Error!","Login failed");
+          }
+          else{
+            this.notification.showSuccess("Success!","You successfully logged in");
+            this.router.navigate(['home']);
+          }
         },
         err => {
           console.log(JSON.stringify(err));
           alert("Error while checking User Information!");
         }
       )
-  }
-  MapData(loginSection: FormGroup) : Login{
-    this.loginInfo.Email = loginSection.controls.loginEmail.value;
-    this.loginInfo.Password = loginSection.controls.loginPassword.value;
-
-    return this.loginInfo;
   }
 }

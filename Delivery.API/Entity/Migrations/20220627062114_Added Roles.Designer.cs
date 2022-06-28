@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Delivery.Entity.Migrations
 {
     [DbContext(typeof(DeliveryContext))]
-    [Migration("20220624075630_Initial Migration")]
-    partial class InitialMigration
+    [Migration("20220627062114_Added Roles")]
+    partial class AddedRoles
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -74,6 +74,27 @@ namespace Delivery.Entity.Migrations
                     b.ToTable("Orders");
                 });
 
+            modelBuilder.Entity("Delivery.Entity.Model.Classes.Role", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Permissions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Roles");
+                });
+
             modelBuilder.Entity("Delivery.Entity.Model.Classes.User", b =>
                 {
                     b.Property<int>("ID")
@@ -112,7 +133,8 @@ namespace Delivery.Entity.Migrations
                     b.Property<string>("Permissions")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Role")
+                    b.Property<int?>("RoleId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("UserName")
@@ -120,6 +142,8 @@ namespace Delivery.Entity.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("RoleId");
 
                     b.ToTable("Users");
                 });
@@ -133,6 +157,17 @@ namespace Delivery.Entity.Migrations
                         .IsRequired();
 
                     b.Navigation("Order");
+                });
+
+            modelBuilder.Entity("Delivery.Entity.Model.Classes.User", b =>
+                {
+                    b.HasOne("Delivery.Entity.Model.Classes.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("Delivery.Entity.Model.Classes.Order", b =>
