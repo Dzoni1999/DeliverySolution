@@ -33,9 +33,17 @@ namespace Delivery.Service.Controllers
         [Route("RegisterUser")]
         public ActionResult Register(UserDTO userInfo)
         {
-            var retval = this._userService.Register(userInfo);
+            try
+            {
+                var retval = this._userService.Register(userInfo);
 
-            return Ok(retval);
+                return Ok(retval);
+
+            }
+            catch (Exception e)
+            {
+                return new JsonResult(e.Message);
+            }
         }
 
 
@@ -45,34 +53,33 @@ namespace Delivery.Service.Controllers
         [Route("CheckIfUserExists")]
         public ActionResult CheckIfUserExists(LoginDTO loginInfo)
         {
-            ResponseDTO<string> retval = null;
+            try { 
+                ResponseDTO<string> retval = null;
 
-            var user = this._userService.GetUserByEmailAndPass(loginInfo.Email, loginInfo.Password);
+                var user = this._userService.GetUserByEmailAndPass(loginInfo.Email, loginInfo.Password);
 
-            if (user == null)
-                retval = new ResponseDTO<string>(false, "Wrong email or password.");
+                if (user == null)
+                    retval = new ResponseDTO<string>(false, "Wrong email or password.");
 
-            else if (user.Status == Entity.Model.Enums.StatusE.Pending && user.RoleId == 3)
-                retval = new ResponseDTO<string>(false, "Pending Activation");
+                else if (user.Status == Entity.Model.Enums.StatusE.Pending && user.RoleId == 3)
+                    retval = new ResponseDTO<string>(false, "Pending Activation");
 
-            else if (user.Status == Entity.Model.Enums.StatusE.Inactive && user.RoleId != 1)
-                retval = new ResponseDTO<string>(false, "Access denied, the account is inactive");
+                else if (user.Status == Entity.Model.Enums.StatusE.Inactive && user.RoleId != 1)
+                    retval = new ResponseDTO<string>(false, "Access denied, the account is inactive");
 
-            else
-            {
-                string token = JwtManager.GetToken(user.Email, user.Role?.Name, user.ID, user.Role?.Permissions, user.Name);
-                retval = new ResponseDTO<string>(token, user.RoleId, true, "");
+                else
+                {
+                    string token = JwtManager.GetToken(user.Email, user.Role?.Name, user.ID, user.Role?.Permissions, user.Name);
+                    retval = new ResponseDTO<string>(token, user.RoleId, true, "");
+                }
+
+                return Ok(retval);
+
             }
-
-            return Ok(retval);
-        }
-
-        [HttpGet]
-        [Route("GetUserById")]
-        public User GetUserById(int userId)
-        {
-            User user = new User();
-            return user;
+            catch(Exception e)
+            {
+                return new JsonResult("Unknown error occured while trying to login!");
+            }
         }
     }
 }

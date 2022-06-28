@@ -25,33 +25,33 @@ namespace Delivery.Services.UserService
         // ----Register Section----
         public ResponseDTO<User> Register(UserDTO dataIn)
         {
-            var user = _mapper.Map<User>(dataIn);
-            var existing = _context.Users.FirstOrDefault(x => !x.IsDeleted && x.Email == user.Email);
+                var user = _mapper.Map<User>(dataIn);
+                var existing = _context.Users.FirstOrDefault(x => !x.IsDeleted && x.Email == user.Email);
 
-            if (existing == null)
-            {
-                switch (Convert.ToInt32(dataIn.Role))
+                if (existing == null)
                 {
-                    case 1:
-                        user.RoleId = 2; //User
-                        user.Status = StatusE.Active;
-                        break;
-                    case 2:
-                        user.RoleId = 3; //Deliverer
-                        user.Status = StatusE.Pending;
-                        break;
-                    default:
-                        return new ResponseDTO<User>(false, "Error while selecting Role. Try again!");
-                }
-                _context.Users.Add(user);
-                _context.SaveChanges();
+                    switch (Convert.ToInt32(dataIn.Role))
+                    {
+                        case 1:
+                            user.RoleId = 2; //User
+                            user.Status = StatusE.Active;
+                            break;
+                        case 2:
+                            user.RoleId = 3; //Deliverer
+                            user.Status = StatusE.Pending;
+                            break;
+                        default:
+                            return new ResponseDTO<User>(false, "Error while selecting Role. Try again!");
+                    }
+                    _context.Users.Add(user);
+                    _context.SaveChanges();
 
-                return new ResponseDTO<User>(user);
-            }
-            else
-            {
-                return new ResponseDTO<User>(false, "Email address is already in use!");
-            }
+                    return new ResponseDTO<User>(user);
+                }
+                else
+                {
+                    return new ResponseDTO<User>(false, "Email address is already in use!");
+                }
         }
 
 

@@ -1,0 +1,47 @@
+<div class="container">
+    <form [formGroup]="loginSection" (submit)="checkIfUserExists()">
+        <div class="welcome">
+          <p><h1>Welcome to Delivery Solution</h1>
+        </div>
+          <!-- Email input -->
+  
+          <small *ngIf="loginSection.get('email').invalid && loginSection.get('email').touched" class="text-danger">Email is required</small>
+          <div class="form-outline mb-4">
+            <input type="email" id="emailAddress" class="form-control" formControlName="email" />
+            <label class="form-label" for="emailAddress">Email address</label>
+          </div>
+  
+          <small *ngIf="loginSection.get('password').invalid && loginSection.get('password').touched" class="text-danger">Password is required</small>
+          <div class="form-outline mb-4">
+            <input type="password" id="password" class="form-control" formControlName="password" />
+            <label class="form-label" for="password">Password</label>
+          </div>
+  
+          <div class="form-outline mb-4 loginError">
+            <label *ngIf="loginFailed" >{{loginFailed}}</label>
+          </div>
+  
+          <button type="submit" class="btn btn-primary btn-block mb-4" [disabled]="loginSection.invalid">Sign in</button> 
+  
+          <!-- Register buttons -->
+          <div class="text-center">
+            <p>Not a member? <a routerLink="/register" >Register</a></p>
+            <p>or sign up with:</p>
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+  
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-google" routerLink="/errorView"></i>
+            </button>
+  
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-twitter" routerLink="/errorView"></i>
+            </button>
+  
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-github" routerLink="/errorView"></i>
+            </button>
+          </div>
+    </form>
+  </div>

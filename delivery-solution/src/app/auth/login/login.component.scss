@@ -1,0 +1,61 @@
+form{
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    color: #fff;
+    box-shadow: 0 0 13px 2px #00000036;
+}
+
+#password{
+    color: black;
+}
+
+.loginError{
+    color: red;
+    margin: 0 auto;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+    align-content: center;
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 30px;
+        color: white;
+        font-weight: bold;
+    }
+
+}
+
+.container{
+    min-height: 100%;
+    width: 100%;
+    
+    max-width: 100%;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+
+        background-image: url(https://steamuserimages-a.akamaihd.net/ugc/933813679840155863/91B2F376343472AC26FEE2BE14173A041B77901B/?imw=1024&imh=692&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true&fbclid=IwAR2NYlQRrJuSTbGR_0BP6wpdpsL7-wDY_cw5xR3qyYJOFlsLcxaDZL6ZfqU);
+        background-size: cover;
+        display: block;
+        z-index: 0;
+    }
+}
