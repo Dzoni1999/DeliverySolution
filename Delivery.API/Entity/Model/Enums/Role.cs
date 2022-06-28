@@ -8,8 +8,8 @@ namespace Delivery.Entity.Model.Enums
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum RoleE
     {
-        Admin,
-        User,
-        Deliverer
+        Admin = 1,
+        User = 2,
+        Deliverer = 3
     }
 }

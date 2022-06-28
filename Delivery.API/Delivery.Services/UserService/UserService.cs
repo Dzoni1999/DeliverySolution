@@ -33,13 +33,12 @@ namespace Delivery.Services.UserService
                 switch (Convert.ToInt32(dataIn.Role))
                 {
                     case 1:
-                        user.RoleId = 1;
+                        user.RoleId = 2; //User
+                        user.Status = StatusE.Active;
                         break;
                     case 2:
-                        user.RoleId = 2;
-                        break;
-                    case 3:
-                        user.RoleId = 3;
+                        user.RoleId = 3; //Deliverer
+                        user.Status = StatusE.Pending;
                         break;
                     default:
                         return new ResponseDTO<User>(false, "Error while selecting Role. Try again!");

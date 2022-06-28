@@ -1,3 +1,4 @@
+import { AuthService } from './../../../services/auth.service';
 import { CommunicationService } from './../../../communication/communication.service';
 import { User, Login } from './../../../models/user';
 import { Component, OnInit } from '@angular/core';
@@ -13,13 +14,17 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   
   loginSection: FormGroup;
+  currentUser: User;
+  loginFailed: any;
 
-  constructor(private communicationService : CommunicationService, private notification: NotificationService, private router: Router) { }
+  constructor(private communicationService : CommunicationService, private notification: NotificationService, private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
+
+
     this.loginSection = new FormGroup({
-      email : new FormControl(''),
-      password : new FormControl('')
+      email : new FormControl('', Validators.required),
+      password : new FormControl('', Validators.required)
     });
   }
 
@@ -27,10 +32,11 @@ export class LoginComponent implements OnInit {
       this.communicationService.CheckIfUserExists(this.loginSection.value).subscribe(
         data => {
           if (data.status == false){
-            this.notification.showError("Error!","Login failed");
+            this.loginFailed = data.message;
           }
           else{
-            this.notification.showSuccess("Success!","You successfully logged in");
+            this.currentUser = data;
+            localStorage.setItem('currentUser', data);
             this.router.navigate(['home']);
           }
         },

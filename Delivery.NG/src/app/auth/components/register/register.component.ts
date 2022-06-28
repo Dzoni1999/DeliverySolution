@@ -1,5 +1,4 @@
 import { NotificationService } from './../../../services/notification.service';
-import { ToastrService } from 'ngx-toastr';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from './../../../models/user';
 import { Component, OnInit } from '@angular/core';
@@ -59,11 +58,9 @@ export class RegisterComponent implements OnInit {
       data=> {
         console.log(data);
         if (data.status == false){
-          this.notification.showError("Error!","Email already exists");
-          this.router.navigate(['register']);
+          location.href = '/register';
         }
         else{
-          this.notification.showSuccess("Success!","Your subscription request has been submitted successfully and is currently being processed. You will receive a notification email shortly once your subscription has been fully activated");
           this.router.navigate(['login']);
         }
         

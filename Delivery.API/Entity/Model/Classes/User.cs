@@ -20,7 +20,7 @@ namespace Delivery.Entity.Model.Classes
         public string UserName { get; set; }
 
         [Required]
-        [EmailAddress(ErrorMessage ="Email is not in valid format!")]
+        [EmailAddress(ErrorMessage = "Email is not in valid format!")]
         public string Email { get; set; }
 
         [Required]
@@ -35,7 +35,9 @@ namespace Delivery.Entity.Model.Classes
         public string Permissions { get; set; }
 
         [Required]
-        public int? RoleId { get; set; }
+        public int RoleId { get; set; }
         public Role Role { get; set; }
+
+        public StatusE Status { get; set; }
     }
 }

@@ -11,7 +11,6 @@ import { SidebarComponent } from './common-components/sidebar/sidebar.component'
 import { HomeComponent } from './home/home/home.component';
 import { HiddenViewComponent } from './home/hidden-view/hidden-view.component';
 
-import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -29,8 +28,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AuthModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot(),
-    BrowserAnimationsModule
   ],
   providers: [
   ],

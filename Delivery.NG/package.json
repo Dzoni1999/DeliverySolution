@@ -22,6 +22,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@auth0/angular-jwt": "^5.0.2",
     "@types/file-saver": "^2.0.0",
     "angular-font-awesome": "^3.1.2",
     "angular2-datetimepicker": "^1.1.1",
@@ -32,13 +33,14 @@
     "ng-multiselect-dropdown": "0.2.4",
     "ng-pick-datetime": "^7.0.0",
     "ngx-image-zoom": "^0.3.4",
-    "ngx-toastr": "^6.5.0",
     "node-sass": "^7.0.1",
     "primeicons": "^1.0.0",
     "primeng": "^7.1.3",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.6.2",
+    "sweetalert2": "^11.4.19",
     "tslib": "^1.9.0",
+    "url-polyfill": "^1.1.12",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

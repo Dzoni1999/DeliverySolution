@@ -13,5 +13,6 @@ namespace Delivery.Entity.DataTransferObjects
         public DateTime BirthDate { get; set; }
         public string Address { get; set; }
         public string Role { get; set; }
+        public string Status { get; set; }
     }
 }

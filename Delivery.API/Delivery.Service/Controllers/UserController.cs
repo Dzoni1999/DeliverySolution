@@ -49,8 +49,20 @@ namespace Delivery.Service.Controllers
 
             var user = this._userService.GetUserByEmailAndPass(loginInfo.Email, loginInfo.Password);
 
-            string token = JwtManager.GetToken(user.Email, user.Role?.Name, user.ID, user.Role?.Permissions, user.Name);
-            retval = new ResponseDTO<string>(token);
+            if (user == null)
+                retval = new ResponseDTO<string>(false, "Wrong email or password.");
+
+            else if (user.Status == Entity.Model.Enums.StatusE.Pending && user.RoleId == 3)
+                retval = new ResponseDTO<string>(false, "Pending Activation");
+
+            else if (user.Status == Entity.Model.Enums.StatusE.Inactive && user.RoleId != 1)
+                retval = new ResponseDTO<string>(false, "Access denied, the account is inactive");
+
+            else
+            {
+                string token = JwtManager.GetToken(user.Email, user.Role?.Name, user.ID, user.Role?.Permissions, user.Name);
+                retval = new ResponseDTO<string>(token, user.RoleId, true, "");
+            }
 
             return Ok(retval);
         }

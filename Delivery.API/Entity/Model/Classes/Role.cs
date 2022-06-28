@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Delivery.Entity.Model.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,5 +9,6 @@ namespace Delivery.Entity.Model.Classes
     {
         public string Name { get; set; }
         public string Permissions { get; set; }
+        public RoleE UserType { get; set; }
     }
 }

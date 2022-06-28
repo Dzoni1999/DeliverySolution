@@ -8,7 +8,10 @@ namespace Delivery.Services.Interfaces
 {
     public interface IUserService
     {
+        //---- Register Methods ----
         ResponseDTO<User> Register(UserDTO dataIn);
+
+        //---- Login Methods ----
         User GetUserByEmailAndPass(string email, string pass);
     }
 }

@@ -10,6 +10,8 @@ namespace Delivery.Entity.DataTransferObjects
 
         public string Message { get; set; } = string.Empty;
 
+        public int Role { get; set; } = 0;
+
         public T Data { get; set; }
 
         public ResponseDTO(T data, bool status = true, string message = "")
@@ -18,7 +20,14 @@ namespace Delivery.Entity.DataTransferObjects
             Status = status;
             Message = message;
         }
-        
+        public ResponseDTO(T data, int role, bool status = true, string message = "")
+        {
+            Data = data;
+            Role = role;
+            Status = status;
+            Message = message;
+        }
+
         public ResponseDTO(bool status, string message)
         {
             Status = status;

@@ -6,6 +6,8 @@ export class User {
     Password: string = '';
     Address: string = '';
     Role: number = 0;
+    Status: number = 0;
+    Permissions: string = '';
 }
 
 
