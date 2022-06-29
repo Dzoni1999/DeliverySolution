@@ -8,18 +8,26 @@ import { Component, OnInit } from '@angular/core';
 export class ProfileComponent implements OnInit {
 
   selectedUser: any;
+  inputDisabled: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
     this.selectedUser = {
       name: "Nikola",
-      lastname: "Nikola",
-      username: "Nikola",
-      password: "Nikola",
-      address: "Nikola",
-      role: 2
+      lastname: "Bogdanovic",
+      username: "Dzoni",
+      password: "12345678",
+      address: "Sedmog Jula 6",
+      email: "eeheey@gmail.com",
+      role: 2,
+      image: 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp'
     }
   }
 
+  changeImage(){}
+
+  activateInput(){
+    this.inputDisabled = false;
+  }
 }

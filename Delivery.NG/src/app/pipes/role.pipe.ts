@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class RolePipe implements PipeTransform {
 
-  transform(value: unknown): unknown {
+  transform(value: any): any {
     switch(value){
       case 1: 
         value = "Admin"

@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { CommonCompsModule } from './common-comps/common-comps.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
@@ -13,7 +14,6 @@ import { RolePipe } from './pipes/role.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    RolePipe
   ],
   imports: [
     BrowserModule,
@@ -23,6 +23,7 @@ import { RolePipe } from './pipes/role.pipe';
     UserModule,
     CommonCompsModule,
     ToastrModule.forRoot(),
+    FormsModule
   ],
   providers: [
 
