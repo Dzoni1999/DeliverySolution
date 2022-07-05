@@ -13,5 +13,11 @@ namespace Delivery.Services.Interfaces
 
         //---- Login Methods ----
         User GetUserByEmailAndPass(string email, string pass);
+
+
+        //---- CRUD Methods ----
+        public List<User> GetAllUsers();
+        public User GetCurrentUser(int id);
+        public string ActivateAccount(int id);
     }
 }

@@ -1,13 +1,14 @@
 export class User {
-    Name: string = '';
-    LastName: string = '';
-    UserName: string = '';
-    Email: string = '';
-    Password: string = '';
-    Address: string = '';
-    Role: number = 0;
-    Status: number = 0;
-    Permissions: string = '';
+    id: number = 0;
+    name: string = '';
+    lastName: string = '';
+    userName: string = '';
+    email: string = '';
+    password: string = '';
+    address: string = '';
+    roleId: number = 0;
+    status: number = 0;
+    permissions: string = '';
 }
 
 export class Login {

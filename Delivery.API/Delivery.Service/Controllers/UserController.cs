@@ -1,4 +1,5 @@
 ﻿using Delivery.Contracts;
+using Delivery.Entity;
 using Delivery.Entity.DataTransferObjects;
 using Delivery.Entity.Model.Classes;
 using Delivery.Service.Helpers;
@@ -19,7 +20,7 @@ namespace Delivery.Service.Controllers
     public class UserController : ControllerBase
     {
         private IRepositoryWrapper _repository;
-        private IUserService _userService; 
+        private IUserService _userService;
 
         public UserController(IRepositoryWrapper repositoryWrapper, IUserService userService)
         {
@@ -53,7 +54,8 @@ namespace Delivery.Service.Controllers
         [Route("CheckIfUserExists")]
         public ActionResult CheckIfUserExists(LoginDTO loginInfo)
         {
-            try { 
+            try
+            {
                 ResponseDTO<string> retval = null;
 
                 var user = this._userService.GetUserByEmailAndPass(loginInfo.Email, loginInfo.Password);
@@ -76,10 +78,42 @@ namespace Delivery.Service.Controllers
                 return Ok(retval);
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return new JsonResult("Unknown error occured while trying to login!");
             }
         }
+
+
+
+        // CRUD User Section
+
+        [HttpGet]
+        [Route("GetAllUsers")]
+        public ActionResult GetAllUsers()
+        {
+           var users = _userService.GetAllUsers();
+
+            return Ok(users);
+        }
+
+        [HttpGet]
+        [Route("GetCurrentUser")]
+        public ActionResult GetCurrentUser(int id)
+        {
+            var user = _userService.GetCurrentUser(id);
+
+            return Ok(user);
+        }
+
+        [HttpGet]
+        [Route("ActivateAccount")]
+        public ActionResult ActivateAccount(int id)
+        {
+            var user = _userService.ActivateAccount(id);
+
+            return Ok(user);
+        }
+
     }
 }

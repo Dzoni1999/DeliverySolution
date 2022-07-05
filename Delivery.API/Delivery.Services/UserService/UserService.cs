@@ -69,5 +69,67 @@ namespace Delivery.Services.UserService
             return retval;
         }
 
+
+
+
+        // ---- User CRUD Section ----
+
+        public List<User> GetAllUsers()
+        {
+            try {  
+                List<User> users = this._context.Users
+                    .Include(x => x.Role)
+                    .Where(x => !x.IsDeleted)
+                    .ToList();
+
+                return users;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+
+        public User GetCurrentUser(int id)
+        {
+            try 
+            { 
+                User user = this._context.Users
+                    .Include(x => x.Role)
+                    .Where(x => !x.IsDeleted)
+                    .Where(x => x.ID == id)
+                    .FirstOrDefault();
+
+                return user;
+            } 
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+
+        public string ActivateAccount(int id)
+        {
+            try
+            {
+                User user = this._context.Users
+                .Include(x => x.Role)
+                .Where(x => !x.IsDeleted)
+                .Where(x => x.ID == id)
+                .FirstOrDefault();
+                user.Status = StatusE.Active;
+                _context.SaveChanges();
+
+                return "Successfully changed status!";
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return "Unexpected error occured!";
+            }
+        }
+
     }
 }

@@ -1,0 +1,70 @@
+<app-admin-navbar></app-admin-navbar>
+<app-admin-sidebar></app-admin-sidebar>
+<section class="usersSection">
+    <div class="container">
+        <div class="row">
+            <table class="styled-table table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Last Name</th>
+                        <th>UserName</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let user of allUsers" class="usersTable">
+                    <tr (click)="editCurrentUser(user.id)">
+                        <td >{{user.name}}</td>
+                        <td >{{user.lastName}}</td>
+                        <td >{{user.userName}}</td>
+                        <td >{{user.address}}</td>
+                        <td >{{user.email}}</td>
+                        <td >{{user.role.name}}</td>
+                        <td >{{user.status | statusPipe }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="userTable">
+    <div class="container">
+        <div class="row">
+            <table class="styled-table table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Last Name</th>
+                        <th>UserName</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td >{{currentUser.name}}</td>
+                        <td >{{currentUser.lastName}}</td>
+                        <td >{{currentUser.userName}}</td>
+                        <td >{{currentUser.address}}</td>
+                        <td >{{currentUser.email}}</td>
+                        <td >{{currentUser.roleId | rolePipe}}</td>
+                        <td [ngClass]="{'backRed': currentUser.status === 3, 'backYellow' : currentUser.status === 2, 'backGreen' : currentUser.status === 1}">{{currentUser.status | statusPipe }}</td>
+                        <td *ngIf="currentUser.status === 2"><button value="{{currentUser.status}}" (click)="ActivateAccount(currentUser.id)">Activate</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+ul{
+  align-items: center;
+  white-space: 10px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  min-width: 199px;
+  text-align: left;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+  right: 0px;
+
+  hr {
+    border-top: 1.5px solid rgba(0,0,0,.55);
+    margin: 0;
+  }
+
+  a {
+    padding: 5px 15px;
+  }
+  
+}

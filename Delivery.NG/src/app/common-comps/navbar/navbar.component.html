@@ -1,7 +1,18 @@
-<nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand">Navbar</a>
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </nav>
+<nav class="navbar navbar-dark bg-dark" style="justify-content: space-between;">
+  <div class="container-fluid">
+        <img src="../../../assets/images/logo4.png" class="navbar-brand" style="width: 250px; border-radius:20px; margin-left: 50px;">
+
+        <div class="account-items navbar-brand" style="margin-right: 55px;">
+          <div class="account-menu nav-item" (click)="dropdown()">
+            <i class="fa-solid fa-user-tie fa-2xl" style="margin-left: 10px;"></i>
+            <div>Profile</div>
+          </div>
+          <div id="account-menu-dropdown" class="dropdown-content">
+            <!-- <a class="dropdown-item" href="#" style="text-align: center;">My profile</a>
+            <hr> -->
+            <a class="dropdown-item" href="#" style="text-align: center;">Log Out</a>
+            <a class="dropdown-item" href="user/profile" style="text-align: center;">Profile</a>
+          </div>
+        </div>
+  </div>
+</nav>

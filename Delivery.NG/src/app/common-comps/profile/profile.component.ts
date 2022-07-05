@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
       password: "12345678",
       address: "Sedmog Jula 6",
       email: "eeheey@gmail.com",
-      role: 2,
+      role: 1,
       image: 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp'
     }
   }
